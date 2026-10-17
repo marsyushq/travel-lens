@@ -1,0 +1,30 @@
+{
+  "name": "520-project-seto-tran-skrypnichenko",
+  "version": "1.0.0",
+  "description": "Express + React app",
+  "homepage": "https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko#readme",
+  "bugs": {
+    "url": "https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko.git"
+  },
+  "license": "ISC",
+  "author": "Jaidan Seto, Candy Tran, Yuliia Skrypnichenko",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && node --watch bin/www",
+    "build": "cd client && npm install && npm run build && cd ../server && npm install",
+    "test": "cd server && mocha --timeout 10000"
+  },
+  "keywords": [],
+  "dependencies": {
+    "compression": "^1.8.1",
+    "csv-parse": "^6.1.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

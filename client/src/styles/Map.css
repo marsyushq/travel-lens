@@ -1,0 +1,77 @@
+/* from https://stackoverflow.com/questions/74914360/react-leaflet-geojson-tooltip-how-to-disable-black-borders-on-click-or-dragging */
+path.leaflet-interactive{
+  outline: none;
+}
+
+/* from https://stackoverflow.com/questions/51869394/how-can-i-set-leaflet-map-background-to-be-white */ 
+.leaflet-container {
+  background-color: #1E1E1E;
+}
+
+.alert-box {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  max-width: 400px;
+  overflow-y: auto;
+  max-height: 120px;
+  margin: 10px;
+  font: 13px Tahoma, Geneva, Arial, sans-serif;
+  color: #555;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/*center to the page using left and transform properties + z-index to stack on top of elements
+  source: 
+  - https: //css-tricks.com/almanac/properties/t/transform/
+  - https: //developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/z-index   
+*/
+.alert-wrapper {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+}
+
+.error {
+  background: #ffecec no-repeat 10px 50%;
+  border: 1px solid #f5aca6;
+}
+
+.warning-msg {
+  margin-top: 5px;
+  font-size: 11px;
+  color: #a94442;
+  opacity: 0.8;
+}
+
+.leaflet-tooltip {
+  background-color: #582f0e;
+  color: #faeede;
+  border-radius: 6px;
+  border: #582f0e;
+  padding: 6px 10px;
+}
+.leaflet-tooltip::before,
+.leaflet-tooltip::after{
+  display: none;
+}
+
+.leaflet-control-zoom a,
+.leaflet-control a {
+  background-color: #582f0e;
+  color: #faeede;
+}
+
+.leaflet-control-zoom a:hover,
+.leaflet-control a:hover {
+  background-color: #b6ad90;
+  color: #23221D;
+}
+
+.leaflet-left {
+  left: 120px;
+}

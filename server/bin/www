@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+import app from '../app.js';
+import { db } from '../db/db.js';
+const port = process.env.PORT || 3000;
+
+const server = app.listen(port, () => {
+  console.log(`Server listening on port ${port}!`);
+});
+
+process.on('SIGTERM', async () => {
+  console.log('sigterm received, closing server...');
+  await db.close();
+  server.close(() => {
+    console.log('server closed');
+  });
+});
+
+process.on('SIGINT', async () => {
+  console.log('sigint received, closing server...');
+  await db.close();
+  server.close(() => {
+    console.log('server closed');
+    process.exit(0);
+  });
+});

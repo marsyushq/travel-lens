@@ -1,0 +1,55 @@
+main {
+    margin-inline: 3%;
+}
+
+.main-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Left stats panel */
+.stats-container {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.map-container {
+    flex: 1;
+    height: 80vh;
+    min-width: 400px;
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+    width: 350px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Default css class that is assigned to the leaflet container */
+.leaflet-container {
+    display: flex;
+    flex-grow: 1;
+    flex: 4;
+    /* margin: 5%; */
+    height: 80vh;
+}

@@ -1,0 +1,218 @@
+/*SIDEBAR CSS*/
+.sidebar-container {
+    flex:1;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-container h2{
+    color: #c2c5aa;
+}
+
+.reset-filter-button{
+    margin-left: 20px;
+    padding: 6px 40px;
+    font-size: 0.8rem;
+    background-color: #582f0e;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #c2c5aa;
+    border: none;
+}
+
+.reset-filter-button:hover {
+    background-color: #b6ad90;
+    color: #23221D;
+}
+
+
+/*HEADER: search bar + filters*/
+.sidebar-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    flex: 1 1 150px;
+    min-width: 100px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #1e1c1f;
+    color: #ccc; 
+}
+
+/* Wrapper for filters + reset button */
+.filters-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* FILTERS CONTAINER*/
+.filters-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+/*source: https: //developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter*/
+.filter-option input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+/* fully colored when checked */
+.filter-option input[type="checkbox"]:checked {
+    opacity: 1;
+}
+
+.filter-option {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+
+/* COUNTRY LIST CONTAINER*/
+.country-list-container {
+    display: block;
+    flex-grow: 1;
+    min-height: 200px;
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding: 0;
+    margin: 0;
+    scrollbar-color: #a68a64 #1E1E1E;
+}
+
+.country-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.country-table th,
+.country-table td {
+    padding: 6px 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.country-row:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.country-name {
+    color: #ccc;
+}
+
+.country-visa {
+    color: #fff; 
+}
+.country-visa span{
+    border: 1px solid white; 
+    border-radius: 40px;
+    padding: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.country-table thead {
+    background-color: #582f0e;
+    position: sticky;
+    color: #c2c5aa;
+    z-index: 2;
+    top: 0;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE TO SMALLER SCREEN
+ Source for translateX: https: //www.geeksforgeeks.org/css/css-transform-property/
+*/
+@media (max-width: 768px) {
+    .country-list-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: stretch;
+        height: auto; 
+        max-height: none; 
+        min-height: 150px;
+        overflow-y: visible;
+    }
+    .sidebar-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .search-bar,
+    .filters-container {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .filters-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .filter-option {
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    .country-name,
+    .country-visa {
+        min-width: 0;
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+
+    .country-list-container {
+        height: auto;
+        max-height: 70vh;
+        min-height: 150px;
+        overflow-x: hidden;
+    }
+}
+
+.no-countries {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #555;
+}
