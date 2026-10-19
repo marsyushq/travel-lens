@@ -1,14 +1,14 @@
 {
-  "name": "520-project-seto-tran-skrypnichenko",
+  "name": "travel-lens",
   "version": "1.0.0",
-  "description": "Express + React app",
-  "homepage": "https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko#readme",
+  "description": "A full-stack travel insights app built with React, Express, and MongoDB, featuring interactive maps and travel-related data visualizations.",
+  "homepage": "https://github.com/marsyushq/travel-lens#readme",
   "bugs": {
-    "url": "https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko/issues"
+    "url": "https://github.com/marsyushq/travel-lens/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/dawson-cst-cohort-2026/520/section1/teams/Team-D13/520-project-seto-tran-skrypnichenko.git"
+    "url": "git+https://github.com/marsyushq/travel-lens.git"
   },
   "license": "ISC",
   "author": "Jaidan Seto, Candy Tran, Yuliia Skrypnichenko",
